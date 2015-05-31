@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+		video#bgvid {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			background: url(polina.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		@media screen and (max-device-width: 800px) {
+		body { background: url(polina.jpg) #000 no-repeat center center fixed; }
+		#bgvid { display: none; }
+		}
+
+		.bodyChild {
+			width: 100%;
+    		height: 100%;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+		}
+
+		.textBackground {
+			background: white;
+			opacity: 0.7;
+		}
+
+		#choices {
+			width:15%;
+			height:90%;
+			margin-top: 1%;
+			margin-left: 1%;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<div id="foreground" style="z-index: 1;" class="bodyChild">
+		</div>
+		<div id="midground" style="z-index: 2;" class="bodyChild">
+		</div>
+		<div id="background style="z-index: 3;" class="bodyChild"">
+			<video autoplay loop poster="ogg371.png" id="bgvid">
+				<source src="ogg371.webm" type="video/webm">
+				<source src="ogg371.mp4" type="video/mp4">
+			</video>	
+		</div>
+	</body>
+</html>
